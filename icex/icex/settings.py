@@ -56,7 +56,7 @@ ROOT_URLCONF = 'icex.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR+"/templates", ],#directorio templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
