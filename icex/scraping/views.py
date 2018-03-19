@@ -3,12 +3,15 @@ import requests
 from django.shortcuts import render
 
 # Create your views here.
-url='http://www.radiouno.pe/'
 def saludo(request):
-    req = requests.get(url)
-    html = BeautifulSoup(req.text, "html.parser")
-    print html
-    #status_code = req.status_code
+    #DEFINCION DE VARIABES
+    ##definimos la lista de pises
+    n_pais = ["Argentina","Bolivia","Brasi","Chile","Colombia","Costa Rica","Cuba","Ecuador","El Salvador","Guayana Francesa","Granada","Guatemala","Guayana","Haiti","Honduras","Jamaica","Mexico","Nicaragua","Paraguay","Panama","Peru","Puerto  Rico","Surinam","Uruguay","Venezuela"]
+    ###link del noticiero
+    not_url='http://www.bbc.com/mundo/search/?q='
+    for i in range(len(n_pais)):
+        url_pais=not_url+n_pais[i]
+        print url_pais
     a=1
     b=3
     sum=a+b
