@@ -1,10 +1,13 @@
+from bs4 import BeautifulSoup
+import requests
 from django.shortcuts import render
 
 # Create your views here.
+url='http://www.radiouno.pe/'
 def saludo(request):
-    #req = requests.get(url)
-    #html = BeautifulSoup(req.text, "html.parser")
-    #print html
+    req = requests.get(url)
+    html = BeautifulSoup(req.text, "html.parser")
+    print html
     #status_code = req.status_code
     a=1
     b=3
@@ -22,3 +25,5 @@ def saludo(request):
     }
     #devolvemos los datos a la vista saludo.html
     return render(request, 'main.html', context)
+    
+cesar escobar certificado virtual inportacion de china 
