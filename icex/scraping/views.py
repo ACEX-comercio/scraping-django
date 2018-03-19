@@ -26,4 +26,3 @@ def saludo(request):
     #devolvemos los datos a la vista saludo.html
     return render(request, 'main.html', context)
     
-cesar escobar certificado virtual inportacion de china 
